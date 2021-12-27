@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     RaycastHit hit;
     int layerMask;
     public GameObject pointer;
+    public GameObject truck;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +34,6 @@ public class PlayerController : MonoBehaviour
         }
 
         pointer.transform.position = pointerPos;
+        truck.GetComponent<NavMeshAgent>().SetDestination(pointerPos);
     }
 }
