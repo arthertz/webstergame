@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = GameObject.FindGameObjectWithTag("playerInputManager").transform.position;
         pointer = Instantiate(pointer, transform.position, Quaternion.identity);
         GetComponentInChildren<PlayerInput>().SetPointer(pointer);
         truck = Instantiate(truck, new Vector3(transform.position.x + Random.Range(-5f, 5f), transform.position.y, transform.position.z + Random.Range(-5f, 5f)) , Quaternion.identity);
