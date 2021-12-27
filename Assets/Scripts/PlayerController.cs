@@ -5,35 +5,29 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    Vector3 pointerPos;
-    RaycastHit hit;
-    int layerMask;
     public GameObject pointer;
     public GameObject truck;
+    public Material[] pointerMats = new Material[2];
+    private static int playerIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (LayerMask.NameToLayer("ground") > 0)
-        {
-            layerMask = 1 << LayerMask.NameToLayer("ground");
-        }
+        pointer = Instantiate(pointer, transform.position, Quaternion.identity);
+        GetComponentInChildren<PlayerInput>().SetPointer(pointer);
+        truck = Instantiate(truck, new Vector3(transform.position.x + Random.Range(-5f, 5f), transform.position.y, transform.position.z + Random.Range(-5f, 5f)) , Quaternion.identity);
+
+        playerIndex++;
+        if (playerIndex > 1)
+            pointer.GetComponent<MeshRenderer>().material = pointerMats[0];
         else
-        {
-            layerMask = 0;
-            Debug.LogError("ground layer not set correctly!");
-        }
+            pointer.GetComponent<MeshRenderer>().material = pointerMats[1];
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, layerMask))
-        {
-            pointerPos = hit.point;
-        }
-
-        pointer.transform.position = pointerPos;
-        truck.GetComponent<NavMeshAgent>().SetDestination(pointerPos);
+        truck.GetComponent<NavMeshAgent>().SetDestination(pointer.transform.position);
     }
 }
