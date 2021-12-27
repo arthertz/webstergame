@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCenter: {fileID: 342734293}
   radius: 25
-  numcars: 20
+  numcars: 100
   carPrefab: {fileID: 3878337475698127828, guid: 2cdb321e351aee44c8fbbee011c1d5e7, type: 3}
   noiseRange: 7
 --- !u!1 &347719997
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCenter: {fileID: 347719998}
   radius: 30
-  numcars: 20
+  numcars: 100
   carPrefab: {fileID: 3878337475698127828, guid: 2cdb321e351aee44c8fbbee011c1d5e7, type: 3}
   noiseRange: 7
 --- !u!1 &816405345
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCenter: {fileID: 1618172803}
   radius: 15
-  numcars: 20
+  numcars: 30
   carPrefab: {fileID: 3878337475698127828, guid: 2cdb321e351aee44c8fbbee011c1d5e7, type: 3}
   noiseRange: 7
 --- !u!4 &1618172803
