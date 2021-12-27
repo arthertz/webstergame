@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class WalkCursor : MonoBehaviour
+public class NavTarget : MonoBehaviour
 {
 
     public Transform target;
