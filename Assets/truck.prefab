@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5437418284706327594}
   - component: {fileID: 6531893704214919952}
   - component: {fileID: 1724569245166735606}
-  - component: {fileID: 3783583304636837390}
   m_Layer: 0
   m_Name: truck
   m_TagString: truck
@@ -47,7 +46,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -86,18 +85,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &3783583304636837390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6960802659633953976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c594a1685b146439c72bc9cd67b957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5757163917212780722
 PrefabInstance:
   m_ObjectHideFlags: 0
